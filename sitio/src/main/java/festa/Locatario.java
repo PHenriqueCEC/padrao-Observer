@@ -16,12 +16,13 @@ public class Locatario implements Observer {
         return this.ultimaAtualizacao;
     }
 
-    public void addObserver(Sitio sitio){
+    public void addObserver(Sitio sitio) {
+
         sitio.addObserver(this);
     }
 
     @Override
-    public void update(Observable observable, Object arg1){
+    public void update(Observable observable, Object arg1) {
         this.ultimaAtualizacao = this.nome + ", sítio disponível para alugar: " + observable.toString();
     }
 
